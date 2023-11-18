@@ -1,0 +1,92 @@
+body{
+    background-color: #1d1d23;
+    color: white;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.timer-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34344a;
+    width: 500px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+.timer-input{
+    display: flex;
+    align-items: center;
+}
+
+input::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
+    display: none;
+}
+
+#set-btn{
+    background-color:  #f0f757;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+}
+
+#set-btn:hover{
+    cursor: pointer;
+}
+
+.current-timers{
+    font-size: 18px;
+    background-color: #39393e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+}
+
+.active-timers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34344a;
+    width: 500px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+
+.timer {
+    font-size: 24px;
+}
+
+.timer-ended {
+    color: red;
+}
+
+.time-left {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: rgb(205, 1, 1);
+}
