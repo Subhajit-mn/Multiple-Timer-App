@@ -1,5 +1,5 @@
 // get reference of the div having class name "active-timers"
-const activeTimers = document.getElementsByClassName("active-timers");
+const activeTimers = document.getElementById("active-timers");
 
 // get a reference of the set button
 const startTimerButton = document.getElementById("set-btn");
@@ -8,7 +8,7 @@ const startTimerButton = document.getElementById("set-btn");
 let isTimerActive = false;
 
 // get a reference of the message "You have no timers currently!"
-const msg = document.getElementsByClassName("message");
+const msg = document.getElementById("message");
 
 // add a click event listener to the set button
 startTimerButton.addEventListener("click", ()=>{
@@ -70,10 +70,12 @@ function createTimer(totalSec){
         if(totalSec <= 0){
             clearInterval(timerInterval);
             timerEle.classList.add("timer-ended");
-            timerEle.innerText("Time is up!");
-            deleteButton.innerText = "Stop";
+            deleteButton.classList.add("stop-btn");
             timeLeftEle.style.display = "none";
-
+            timerEle.innerText = "Timer Is Up !";
+            timerContainer.style.background = "#f0f757";
+            deleteButton.innerText = "Stop";
+            
             // play audio alert when timer ends
             playAudioAlert();
         }else{
@@ -106,8 +108,8 @@ function createTimer(totalSec){
     activeTimers.appendChild(timerContainer);
 }    
 
-    //function to play audio
-    function playAudioAlert(){
-        const audio = new Audio("./alert.wav");
-        audio.play();
-    }
+//function to play audio
+function playAudioAlert(){
+    const audio = new Audio("./alert.wav");
+    audio.play();
+}

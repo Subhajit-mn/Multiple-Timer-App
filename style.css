@@ -27,6 +27,10 @@ body{
     align-items: center;
 }
 
+input:focus{
+    outline: none;
+}
+
 input::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
     display: none;
 }
@@ -51,10 +55,13 @@ input::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
     border-radius: 50px;
 }
 
-.active-timers{
+#active-timers{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
 }
 
 .timer-container{
@@ -74,7 +81,12 @@ input::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
 }
 
 .timer-ended {
-    color: red;
+    color: black;
+}
+
+.stop-btn{
+    background-color: black !important;
+    color: white !important;
 }
 
 .time-left {
@@ -82,11 +94,14 @@ input::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
     margin-right: 10px;
 }
 
-.delete-button {
-    background-color: red;
-    color: white;
+#delete-btn{
+        background-color:  #f0f757;
+        color: black;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 20px;
 }
 
-.delete-button:hover {
-    background-color: rgb(205, 1, 1);
+#delete-btn:hover{
+    cursor: pointer;
 }
