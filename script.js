@@ -51,7 +51,7 @@ function createTimer(totalSec){
     // create an element to display "Time Left"
     const timeLeftEle = document.createElement("div");
     timeLeftEle.classList.add("time-left");
-    timeLeftEle.innerText = "Time Left";
+    timeLeftEle.innerText = "Time Left :";
 
     // create an element to display timer value
     const timerEle = document.createElement("div");

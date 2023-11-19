@@ -24,7 +24,27 @@ body{
 
 .timer-input{
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+#hrs, #mins, #sec{
+    background-color: #34344a;
+    color: white;
+    border: none;
+    width: 70px;
+    font-size: 35px;
+    height: 52px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+::placeholder{
+    color: white;
+}
+
+::-ms-input-placeholder{
+    color: white;
 }
 
 input:focus{
@@ -104,4 +124,8 @@ input::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
 
 #delete-btn:hover{
     cursor: pointer;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
